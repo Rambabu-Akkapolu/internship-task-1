@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/form.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="assignment-title">Task-1</div>
+    <header>
+    <nav>
+        <ul class='nav-bar'>
+            <li class='logo'><a href='#'><img src='./assets/logo.png'/></a></li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="#form">Form</a></li>
+                <li><a href="#table">Table</a></li>
+                <li><a href="#list">List</a></li>
+                <li><a href="#media">Media</a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+    </header>
+    <section id="form">
+        <article class="form-container ">
+            <form name='registration' onSubmit="return formValidation();">
+                <h2>Registration Form</h2>
+                <ul>
+                    <li><label for="userid">User id:</label></li>
+                    <li><input type="text" name="userid" size="20" /></li>
+                    <li><label for="username">Name:</label></li>
+                    <li><input type="text" name="username" size="20" /></li>
+                    <li><label for="passid">Password:</label></li>
+                    <li><input type="password" name="passid" size="20" /></li>
+                    <li><label for="address">Address:</label></li>
+                    <li><input type="text" name="address" size="20" /></li>
+                    <li><label for="country">Country:</label></li>
+                    <li><select name="country">
+                        <option selected="" value="Default">Please select a country</option>
+                        <option value="AF">Australia</option>
+                        <option value="AL">Canada</option>
+                        <option value="DZ">India</option>
+                        <option value="AS">Russia</option>
+                        <option value="AD">USA</option>
+                        </select></li>
+                    <li><label for="zip">ZIP Code:</label></li>
+                    <li><input type="text" name="zip" size="20" /></li>
+                    <li><label for="email">Email:</label></li>
+                    <li><input type="text" name="email" size="20" /></li>
+                    <li><label id="gender">Gender:</label></li>
+                    <li><input type="radio" name="msex" value="Male" /><span>Male</span></li>
+                    <li><input type="radio" name="fsex" value="Female" /><span>Female</span></li>
+                    <li><label>Language:</label></li>
+                    <li><input type="checkbox" name="en" value="en" checked /><span>English</span></li>
+                    <li><input type="checkbox" name="nonen" value="noen" /><span>Telugu</span></li>
+                    <li><label for="desc">About:</label></li>
+                    <li><textarea name="desc" id="desc"></textarea></li>
+                    <li><input class="button" type="submit" name="submit" value="Submit"  /></li>
+                </ul>
+            </form>
+        </article>
+    </section>
+    <section id="table">
+        <article class="table-container">
+            <table>
+                <tr>
+                <th colspan="4" style="background-color:#5E1D55;color:white;"><span class="table-heading">TABLE</span></th>
+                </tr>
+                <tr style="background-color:#32A9EE;color:white;">
+                <th>Rank</th>
+                <th>Team</th>
+                <th>Point</th>
+                <th>Rating</th>
+                </tr>
+                <tr>
+                <td><b>1</b></td>
+                <td>India</td>
+                <td>3634</td>
+                <td>125</td>
+                </tr>
+                <tr>
+                <td><b>2</b></td>
+                <td>South Africa</td>
+                <td>3589</td>
+                <td>112</td>
+                </tr>
+                <tr>
+                <td><b>3</b></td>
+                <td>Australia</td>
+                <td>3499</td>
+                <td>106</td>
+                </tr>
+                <tr>
+                <td><b>4</b></td>
+                <td>New Zealand</td>
+                <td>2354</td>
+                <td>102</td>
+                </tr>
+                <tr>
+                <td><b>5</b></td>
+                <td>England</td>
+                <td>3772</td>
+                <td>97</td>
+                </tr>
+                <tr>
+                <td><b>6</b></td>
+                <td>Sri Lanka</td>
+                <td>3182</td>
+                <td>91</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+    <section id="list">
+        <article class="list-container">
+            <h3>List Items</h3>
+            <ol class="list-items">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ol>
+        </article>
+    </section>
+    <section id="media">
+        <div class="media-container">
+            <h2>Video</h2>
+            <div class="video-wrapper">
+                <video controls>
+                    <source src="assets/video.mp4"  type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="media-container">
+            <h2> Audio</h2>
+            <audio controls class="audio-wrapper">
+                <source src="assets/audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+    <section id="box-model">
+         <div class="box-container">
+            <div class="box-content">BOX MODEL</div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-content">Made with &#10084; by Rambabu</div>
+        </div>
+    </footer>
+
+</body>
+</html>
